@@ -28,7 +28,7 @@ RCT_CUSTOM_VIEW_PROPERTY(coordinate, CLLocationCoordinate, NSTStreetView) {
   }
 
   [view moveNearCoordinate:[RCTConvert CLLocationCoordinate2D:json]
-                    radius: radius];
+                    radius: radius source: kGMSPanoramaSourceOutside];
 }
 
 RCT_CUSTOM_VIEW_PROPERTY(heading, CLLocationDegrees, NSTStreetView) {
@@ -37,7 +37,7 @@ RCT_CUSTOM_VIEW_PROPERTY(heading, CLLocationDegrees, NSTStreetView) {
 }
 
 RCT_EXPORT_VIEW_PROPERTY(allGesturesEnabled, BOOL)
-RCT_EXPORT_VIEW_PROPERTY(indoorOnly, BOOL)
+RCT_EXPORT_VIEW_PROPERTY(showOutdoorOnly, BOOL)
 RCT_EXPORT_VIEW_PROPERTY(onError, RCTDirectEventBlock);
 RCT_EXPORT_VIEW_PROPERTY(onSuccess, RCTDirectEventBlock);
 
